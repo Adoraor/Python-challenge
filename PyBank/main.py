@@ -42,6 +42,7 @@ greatest_decrease_index = changes_profit_loss.index(greatest_decrease) + 1
 greatest_increase_date = Dates[greatest_increase_index]
 greatest_decrease_date = Dates[greatest_decrease_index]
 
+#export to text file 
 with open('/Users/adora/Desktop/BOOTCAMP_ASSIGNMENTS/Python_challenge/Python-challenge/PyBank/analyis/bank.txt', 'w') as f:
     f.write('Financial Analysis\n')
     f.write('----------------------------\n')

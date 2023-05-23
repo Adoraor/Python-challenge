@@ -31,8 +31,7 @@ total_votes = len(ballot_ids)
 candidates_voted = set(candidates)
 vote_count = Counter(candidates)
 
-
-
+#export to text file
 with open('/Users/adora/Desktop/BOOTCAMP_ASSIGNMENTS/Python_challenge/Python-challenge/PyPoll/analysis/election.txt', 'w') as f:
     f.write('Election Results\n')
     f.write('-------------------------\n')
