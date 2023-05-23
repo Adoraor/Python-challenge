@@ -2,7 +2,10 @@ from collections import Counter
 import os
 import csv
 
-poll_csv = os.path.join("/Users/adora/Desktop/BOOTCAMP_ASSIGNMENTS/Python_challenge/Python-challenge/PyPoll/Resources/election_data.csv")
+csv_file_path = 'Resources/election_data.csv'
+script_directory = os.path.dirname(os.path.abspath(__file__))
+poll_csv = os.path.join(script_directory, csv_file_path)
+
 
 ballot_ids = []
 counties = []
@@ -47,3 +50,18 @@ with open('/Users/adora/Desktop/BOOTCAMP_ASSIGNMENTS/Python_challenge/Python-cha
     f.write('-------------------------\n')
 
 
+#print in terminal
+print ('Election Results')
+print('-------------------------')
+print(f'Total Votes: {total_votes}')
+print('-------------------------')
+
+for candidate, count in vote_count.items():
+        percentage = (count / total_votes) * 100
+        vote_percentage = f" {candidate}: {percentage:.3f}% ({count})"
+        print(vote_percentage)
+        winner = (vote_count.most_common()[0][0])
+print('-------------------------')
+print(f'Winner: {winner}')
+
+print('-------------------------')

@@ -1,7 +1,10 @@
 import os
 import csv
 
-bank_csv = os.path.join("/Users/adora/Desktop/BOOTCAMP_ASSIGNMENTS/Python_challenge/Python-challenge/PyBank/Resources/budget_data.csv")
+csv_file_path = 'Resources/budget_data.csv'
+script_directory = os.path.dirname(os.path.abspath(__file__))
+bank_csv = os.path.join(script_directory, csv_file_path)
+
 
 # Open and read csv file
 with open(bank_csv) as csv_file:
@@ -47,6 +50,15 @@ with open('/Users/adora/Desktop/BOOTCAMP_ASSIGNMENTS/Python_challenge/Python-cha
     f.write(f'Average Change: ${average_changes}\n')
     f.write(f'Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase})\n')
     f.write(f'Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease})\n')
+
+#print in terminal
+print('Financial Analysis')
+print('----------------------------')
+print(f'Total Months: {total_months}')
+print(f'Total: ${entire_total_amount}')
+print(f'Average Change: ${average_changes}')
+print(f'Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase})')
+print(f'Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease})')
 
    
    
